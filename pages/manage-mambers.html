@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Members</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../pages/css/manage-menbers.css">
+    <script defer src="../js/jquery-3.6.1.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script defer src="./js/manage-members.js"></script>
+</head>
+<body class="container">
+    <header>
+        <ion-icon name="contacts"></ion-icon>
+        <h1 class="text-center">Manage Members</h1>
+        <ion-icon class="" name="close-circle"></ion-icon>
+    </header>
+    <main>
+        <div class="d-flex justify-content-between">
+            <span class="align-self-end px-1">Search members</span>
+            <button class="btn btn-primary">+ New Member</button>
+        </div>
+        <input class="form-control 3t-3" type="text">
+        <table id="tbl-members" class="table table-hover mt-3"> 
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>ADDRESS</th >
+                    <th>CONTACT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>M001</td>
+                    <td>Tharindu Perera</td>
+                    <td>No.159/5, Galle road, Panadura.</td>
+                    <td>071-4567895</td>
+                </tr>
+                <tr>
+                    <td>M002</td>
+                    <td>Maven Perera</td>
+                    <td>No.159/5, Galle road, Kalutara.</td>
+                    <td>071-4   566253</td>
+                </tr>
+                <tr class="text-center">
+                    <td colspan="4">There are no members to display</td>
+                </tr>
+            </tbody>
+        </table>
+        <nav class="d-flex justify-content-center" aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+    </main>
+</body>
+</html>
