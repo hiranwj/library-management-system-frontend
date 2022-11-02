@@ -1,0 +1,20 @@
+[
+    {
+        "id": "M001",
+        "name": "Maven Perera",
+        "address": "Horana road, Panadura",
+        "contact": "071-4567893"
+    },
+    {
+        "id": "M002",
+        "name": "Dilanka Silva",
+        "address": "Galle road, Dehiwala",
+        "contact": "078-7894563"
+    },
+    {
+        "id": "M003",
+        "name": "Shanka Peris",
+        "address": "Hirana road, Colombo",
+        "contact": "077-4586852"
+    }
+]
