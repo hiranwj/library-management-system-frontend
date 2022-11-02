@@ -128,3 +128,89 @@ $(document).keyup((eventData)=>{
         $('#txt-search').focus();
     }
 })
+
+$('#btn-new-member').click(()=> {
+    const frmMemberDetail = new bootstrap.Modal(document.getElementById('frm-member-detail'));
+    $('#frm-member-detail').addClass('new')
+        .on('shown.bs.modal', ()=>{
+        $('txt-name').focus();
+    });
+    frmMemberDetail.show();
+});
+
+$("#frm-member-detail").submit(()=> $('#btn-save').click());
+
+$('#btn-save').click(() =>{
+    
+    const name = $('#txt-name').val();
+    const address = $('#txt-address').val();
+    const contact = $('#txt-contact').val();
+    let validated = true;
+
+
+    $('#txt-name, #txt-address, #txt-contact').removeClass('is-invalid');
+
+    if(!/^\d{3}-\d{7}$/.test(contact)) {
+        $('#txt-contact').addClass('is-invalid');
+        let validated = true;
+    }
+
+    if (!/^[A-Za-z ]+$/.test(name)) {
+        $('#txt-name').addClass('is-invalid');
+        let validated = true;
+    }
+
+    if(!/^[A-Za-z0-9#|,./\-;:]+$/.test(address)) {
+        $('#txt-address').addClass('is-invalid');
+        let validated = true;
+    }
+    
+    if(!validated) return;
+
+    saveMember();
+
+});
+
+
+function saveMember(){
+    return new Promise((resolve, reject) => {
+        
+        // setTimeout(()=> resolve(), 5000);
+        setTimeout(()=> reject(), 2000);
+
+    });
+}
+
+doSomething();
+
+async function doSomething() {
+    try{
+        await saveMember();
+        console.log("Promise eka una widihatama una...");
+    }catch(e){
+        console.log("Promise eka una...");
+    }
+}
+
+
+// async function saveMember(){
+//         // setTimeout(()=> resolve(), 5000);
+//         setTimeout(()=> reject(), 2000);
+// }
+
+// const promise = saveMember();
+// console.log(promise);
+
+// promise.then(()=> {
+//     console.log(promise);
+//     console.log("Kiwwa wagema kala... 1");
+// }).catch(()=> {
+//     console.log("Promise eka kalea...! 1");
+// });
+
+// promise.then(()=> {
+//     console.log("Kiwwa wagema kala... 2");
+// }).catch(()=> {
+//     console.log("Promise eka kalea...! 2");
+// });
+

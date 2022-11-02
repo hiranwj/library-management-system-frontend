@@ -28,7 +28,7 @@
     <main>
         <div class="d-flex justify-content-between">
             <div class="align-self-end px-1 ">Search Members</div>
-            <div><button class="btn btn-primary">+ New Member</button></div>
+            <div><button id="btn-new-member" class="btn btn-primary">+ New Member</button></div>
         </div>
         <input id="txt-search" class="form-control mt-2" type="text" placeholder="Enter id, name, address, contact number, etc. to search">
         <table id="tbl-members" class="table table-hover mt-3">
@@ -81,6 +81,58 @@
               </div>
               <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
+        </div>
+    </div>
+    <div class="modal fade" id="frm-member-detail" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Member Details</h1>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="txt-id" class="form-label">Member ID</label>
+                    <input type="text" class="form-control is-invalid" id="txt-id">
+                  </div> 
+                  <div class="mb-3">
+                    <label for="txt-name" class="form-label">Member Name</label>
+                    <input type="text" class="form-control is-invalid" id="txt-name" placeholder="Eg. Kasun Sampath">
+                  </div>   
+                  <div class="mb-3">
+                    <label for="txt-address" class="form-label">Member Address</label>
+                    <input type="text" class="form-control is-invalid" id="txt-address" placeholder="Eg. #20/A, Galle Road, Panadura">
+                  </div>   
+                  <div class="mb-3">
+                    <label for="txt-contact" class="form-label">Member Contact</label>
+                    <input type="text" class="form-control is-invalid" id="txt-contact" placeholder="Eg. 011-1234567">
+                  </div>
+                  <button class="d-none"></button>                                                                          
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+            <button id="btn-close" type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                <ion-icon name="close-outline"></ion-icon>
+                Close
+            </button>
+            <button id="btn-edit" type="button" class="btn btn-primary">
+                <ion-icon name="create-outline"></ion-icon>
+                Edit Details
+            </button>
+            <button id="btn-save" type="button" class="btn btn-primary d-none">
+                <ion-icon name="create-outline"></ion-icon>
+                Save
+            </button>
+            <div id="edit-buttons-wrapper" class="d-none">
+                <button id="btn-delete" type="button" class="btn btn-danger">
+                    <ion-icon name="trash-bin-outline"></ion-icon>
+                    Delete
+                </button>
+                <button id="btn-update" type="button" class="btn btn-success">
+                    <ion-icon name="save-outline"></ion-icon>
+                    Update
+                </button>                
+            </div>
+            </div>
+        </div>
         </div>
     </div>
     <footer>
