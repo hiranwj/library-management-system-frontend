@@ -1,3 +1,5 @@
+const API_END_POINT = 'http://34.100.243.249:8080/lms/api';
+
 const pageSize = 5;
 let page = 1;
 
@@ -45,7 +47,7 @@ function getMembers(query=`${$(`#txt-search`).val()}`) {
     });
 
     /* (3) Open the request */
-    http.open('GET', `http://localhost:8080/lms/api/members?size=${pageSize}&page=${page}&q=${query}`, true);
+    http.open('GET', `${API_END_POINT}/members?size=${pageSize}&page=${page}&q=${query}`, true);
 
     /* (4) Set additioanl information for the request (can get from documentation)*/
 
