@@ -88,27 +88,6 @@ header{
     }
 }
 
-footer{
-    // background-color: yellow;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center;
-    padding: 10px;
-    border-top: 1px solid lightgray;
-    font-size: 0.9rem;
-
-    a{
-        text-decoration: none;
-    }
-
-    @media all and (max-width: 870px){
-        margin-top: 10px;
-        position: relative;
-    }
-}
-
 
 #titleNewMember{
     font-weight: bold;
@@ -152,3 +131,23 @@ footer{
   
   }
   
+  footer{
+    // background-color: yellow;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid lightgray;
+    font-size: 0.9rem;
+
+    a{
+        text-decoration: none;
+    }
+
+    @media all and (max-width: 870px){
+        margin-top: 10px;
+        position: relative;
+    }
+}
