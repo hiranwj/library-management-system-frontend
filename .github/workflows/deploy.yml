@@ -2,7 +2,7 @@ name: "CI/CI Pipeline for LMS Front-End"
 on: 
   push: 
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
