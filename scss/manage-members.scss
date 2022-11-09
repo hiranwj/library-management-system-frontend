@@ -21,29 +21,44 @@ header{
 #tbl-members{
     th:first-child,
     tbody td:first-child{
-        text-align: center;
+        text-align: left;
         min-width: 110px;
         max-width: 170px;
         word-break: keep-all;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-
-        tbody tr:focus {
-            background-color: rgb(255, 255, 75);
-        }
     }
 
     th:nth-child(2),
     tbody td:nth-child(2){
-        width: 250px;
+        min-width: 150px;
+        max-width: 250px;
     }
+
+    th:nth-child(3),
+    tbody td:nth-child(3){
+        min-width: 150px;
+    }  
 
     th:last-child,
     tbody td:last-child{
         width: 150px;
+        min-width: 150px;
         text-align: center;
-    }    
+    }
+    
+    tfoot{
+        display: none;
+    }
+
+    tbody tr:focus{
+      background-color: rgb(241, 241, 241);
+    }
+
+    tbody tr{
+      cursor: pointer;
+    }
 }
 
 #loader{

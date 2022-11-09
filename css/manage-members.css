@@ -1,13 +1,16 @@
 header {
   position: relative;
 }
+
 header h3 {
   vertical-align: middle;
   font-size: 2rem;
 }
+
 header h3 ion-icon {
   vertical-align: middle;
 }
+
 header a {
   position: absolute;
   right: 0;
@@ -17,7 +20,7 @@ header a {
 
 #tbl-members th:first-child,
 #tbl-members tbody td:first-child {
-  text-align: center;
+  text-align: left;
   min-width: 110px;
   max-width: 170px;
   word-break: keep-all;
@@ -25,30 +28,49 @@ header a {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#tbl-members th:first-child tbody tr:focus,
-#tbl-members tbody td:first-child tbody tr:focus {
-  background-color: rgb(255, 255, 75);
-}
+
 #tbl-members th:nth-child(2),
 #tbl-members tbody td:nth-child(2) {
-  width: 250px;
+  min-width: 150px;
+  max-width: 250px;
 }
+
+#tbl-members th:nth-child(3),
+#tbl-members tbody td:nth-child(3) {
+  min-width: 150px;
+}
+
 #tbl-members th:last-child,
 #tbl-members tbody td:last-child {
   width: 150px;
+  min-width: 150px;
   text-align: center;
+}
+
+#tbl-members tfoot {
+  display: none;
+}
+
+#tbl-members tbody tr:focus {
+  background-color: rgb(241, 241, 241);
+}
+
+#tbl-members tbody tr {
+  cursor: pointer;
 }
 
 #loader {
   display: flex;
   justify-content: center;
 }
+
 #loader .lds-facebook {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
 }
+
 #loader .lds-facebook div {
   display: inline-block;
   position: absolute;
@@ -57,18 +79,22 @@ header a {
   background: rgb(20, 173, 220);
   animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
+
 #loader .lds-facebook div:nth-child(1) {
   left: 8px;
   animation-delay: -0.24s;
 }
+
 #loader .lds-facebook div:nth-child(2) {
   left: 32px;
   animation-delay: -0.12s;
 }
+
 #loader .lds-facebook div:nth-child(3) {
   left: 56px;
   animation-delay: 0;
 }
+
 @keyframes lds-facebook {
   0% {
     top: 8px;
@@ -79,7 +105,6 @@ header a {
     height: 32px;
   }
 }
-
 #titleNewMember {
   font-weight: bold;
 }
@@ -88,21 +113,27 @@ header a {
   font-size: 1.3em;
   vertical-align: sub;
 }
+
 #frm-member-detail.new #btn-edit, #frm-member-detail.new #edit-buttons-wrapper {
   display: none;
 }
+
 #frm-member-detail.new #btn-save {
   display: inline !important;
 }
+
 #frm-member-detail.new .modal-body > div:first-child {
   display: none;
 }
+
 #frm-member-detail.edit #btn-edit, #frm-member-detail.edit #btn-save {
   display: none;
 }
+
 #frm-member-detail.edit #edit-buttons-wrapper {
   display: block !important;
 }
+
 #frm-member-detail.edit #edit-buttons-wrapper ion-icon {
   padding-right: 5px;
 }
@@ -117,14 +148,17 @@ footer {
   border-top: 1px solid lightgray;
   font-size: 0.9rem;
 }
+
 footer a {
   text-decoration: none;
 }
+
 @media all and (max-width: 870px) {
   footer {
     margin-top: 10px;
     position: relative;
   }
 }
+/*# sourceMappingURL=manage-members.css.map */
 
 /*# sourceMappingURL=manage-members.css.map */
